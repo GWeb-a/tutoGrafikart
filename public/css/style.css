@@ -1,0 +1,86 @@
+.navbar {
+    padding: 0;
+}
+
+.navbar > a {
+    padding: 15px;
+}
+
+.navbar-brand {
+    background-color: #789A33;
+    margin-right: 0;
+}
+
+.navbar-brand img {
+    height: 30px;
+}
+
+#navbar-triangle{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 30px solid transparent;
+    border-bottom : 30px solid transparent;
+    border-left : 30px solid #789A33;
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #F0F9DF !important;
+}
+
+.active {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+.jumbotron {
+    background-color: #F0F9DF;
+}
+
+.bg-green {
+    background-color: #9DBD5C;
+}
+
+.card {
+    min-height: 175px;
+}
+
+.card > .card-body > .card-title > a {
+    text-decoration: none;
+    color: #F0F9DF;
+}
+
+.card > .card-body > .card-title > a:hover {
+    color: white;
+}
+
+.card-bottom {
+    position: absolute;
+    bottom: 0px;
+}
+
+thead.thead-green {
+    color: white;
+    background-color: #9DBD5C;
+}
+
+th {
+    border: 0 !important;
+}
+
+tbody > tr {
+    background-color: #F0F9DF;
+}
+
+td {
+    border-bottom: 0 !important;
+    border-top: 1px solid #789A33 !important;
+}
+
+.btn:hover {
+    background-color: #789A33;
+}

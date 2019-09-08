@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Accueil' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Ping News</h1>
+
+        <p>
+            Site regroupant toute l'actualité autour du tennis de table.
+        </p>
+    </div>
+
+    <div class="container">
+        <h2 class="text-center mb-3">Derniers articles</h2>
+        <div class="row flex">
+            {% for article in articles %}
+
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="card-title bg-green p-2 text-white"><a href="{{ path('articles.show', {id: article.id, slug:article.slug})  }}">{{ article.title }}</a></div>
+                            <div class="card-text p-2">
+                                <p>{{ article.content|slice(0, 50) }}..</p>
+                                <p class="card-bottom">Par {{ article.authorid }} le {{ article.articledate|date('d/m/Y à H\\hi') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

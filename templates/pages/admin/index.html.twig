@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Gestion des Articles' %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center mt-3">Gestion des Articles</h1>
+
+        <table class="table mt-5">
+            <thead class="thead-green">
+                <tr>
+                    <th>Titre</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for article in articles %}
+                    <tr>
+                        <td>{{ article.title }}</td>
+                        <td class="text-right"><a href="{{ path('admin.articles.edit', {id:article.id}) }}" class="btn bg-green text-white">Editer</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ path('admin.articles.create') }}" class="btn bg-green text-white">Ajouter un Article</a>
+    </div>
+{% endblock %}
